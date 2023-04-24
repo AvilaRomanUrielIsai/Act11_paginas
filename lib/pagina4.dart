@@ -1,21 +1,58 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
-class Pagina4 extends StatelessWidget {
-  const Pagina4({super.key});
+void main() {
+  runApp(MyApp());
+}
 
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Primera pantallla'),
+    return MaterialApp(
+      title: 'Flutter Learning',
+      theme: ThemeData(
+        primarySwatch: Colors.green,
       ),
-      body: Center(
-        child: ElevatedButton(
-          child: const Text('Cambiar página'),
-          onPressed: () {
-            // Navega a la segunda pantalla usando una ruta con nombre
-            Navigator.pushNamed(context, '/segunda');
-          },
+      home: Pagina4(),
+    );
+  }
+}
+
+class Pagina4 extends StatefulWidget {
+  @override
+  _MyHomePageState createState() {
+    return _MyHomePageState();
+  }
+}
+
+class _MyHomePageState extends State<Pagina4> {
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          bottom: const TabBar(
+            tabs: [
+              Tab(text: "Aviones", icon: Icon(Icons.flight)),
+              Tab(text: "Trenes", icon: Icon(Icons.train)),
+              Tab(text: "Restaurantes", icon: Icon(Icons.restaurant)),
+            ],
+          ),
+          title: const Text('Flutter TabBar'),
+        ),
+        body: const TabBarView(
+          children: <Widget>[
+            Center(
+              child: Text("Aviones"),
+            ),
+            Center(
+              child: Text("Trenes"),
+            ),
+            Center(
+              child: Text("Restaurantes"),
+            ),
+          ],
         ),
       ),
     );

@@ -17,7 +17,7 @@ void main() {
       // Cuando naveguemos hacia la ruta "/second", crearemos el Widget SecondScreen
       '/segunda': (context) => const Pagina2(),
       '/tercera': (context) => const Pagina3(),
-      '/cuarta': (context) => const Pagina4(),
+      '/cuarta': (context) => Pagina4(),
     },
   ));
 }

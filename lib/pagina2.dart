@@ -14,9 +14,9 @@ class Pagina2 extends StatelessWidget {
           onPressed: () {
             // Navega de regreso a la primera pantalla haciendo clic en la ruta actual
             // fuera de la pila
-            Navigator.pop(context);
+            Navigator.pushNamed(context, '/tercera');
           },
-          child: const Text('Regresar!'),
+          child: const Text('Siguiente Página'),
         ),
       ),
     );
