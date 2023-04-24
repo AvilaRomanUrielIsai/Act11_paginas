@@ -42,7 +42,7 @@ class _MyHomePageState extends State<Pagina4> {
               Tab(text: "Restaurantes", icon: Icon(Icons.restaurant)),
             ],
           ),
-          title: const Text('Flutter TabBar'),
+          title: const Text('Cuarta Pantalla (Tab Bar)'),
         ),
         body: const TabBarView(
           children: <Widget>[
