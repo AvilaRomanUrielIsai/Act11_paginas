@@ -7,7 +7,7 @@ class Pagina3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tercera pantallla'),
+        title: const Text('Tercera Pantallla'),
       ),
       body: Center(
         child: ElevatedButton(
@@ -33,21 +33,21 @@ class Pagina3 extends StatelessWidget {
               ),
             ),
             ListTile(
-              title: Text('Primer Item'),
+              title: const Text('Primera Página'),
               onTap: () {
                 // Actualiza el estado de la aplicación
                 // ...
                 // Luego cierra el drawer
-                Navigator.pop(context);
+                Navigator.pushNamed(context, '/');
               },
             ),
             ListTile(
-              title: Text('Segundo Item'),
+              title: const Text('Segunda Página'),
               onTap: () {
                 // // Actualiza el estado de la aplicación
                 // ...
                 // Luego cierra el drawer
-                Navigator.pop(context);
+                Navigator.pushNamed(context, '/segunda');
               },
             ),
           ],
